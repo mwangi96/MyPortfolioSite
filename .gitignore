@@ -1,0 +1,16 @@
+# Ignore compiled files
+*.class
+*.o
+*.dll
+
+# Ignore build directories
+/build/
+/dist/
+/node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore sensitive configuration files
+config.ini
+secrets.json
