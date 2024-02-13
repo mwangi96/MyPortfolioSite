@@ -14,3 +14,7 @@
 # Ignore sensitive configuration files
 config.ini
 secrets.json
+
+#other files
+package.json
+tailwind.config.js
