@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      screens:{
+        "sm":"480px"
+      }
+    },
+    fontFamily:{
+      nuito: ["Nuito", "sans-serif"]
+    }
   },
   plugins: [],
 }
