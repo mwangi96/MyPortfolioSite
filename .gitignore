@@ -16,5 +16,6 @@ config.ini
 secrets.json
 
 #other files
-package.json
-tailwind.config.js
+/package.json/
+/tailwind.config.js/
+/package-lock.json/
