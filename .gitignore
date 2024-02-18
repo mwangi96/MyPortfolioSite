@@ -4,9 +4,9 @@
 *.dll
 
 # Ignore build directories
-/build/
-/dist/
-/node_modules/
+build/
+dist/
+node_modules/
 
 # Ignore log files
 *.log
@@ -16,4 +16,4 @@ config.ini
 secrets.json
 
 #other files
-*.json
+*.json/
