@@ -7,22 +7,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/portfolio-img.jpg" type="image/x-icon" >
     <title>MyPortfolioSite</title>
+    <style>
+        #favicon{
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="font-nuito">
     <!-- Intro section -->
     <div class="h-1/2 lg:h-screen bg-gradient-to-t from bg-indigo-200">
         <!-- navbar -->
         <nav class="w-full fixed top-0 bg-white">
-            <div class="container mx-auto py-3 flex justify-between">
-                <div class="flex items-center gap-2">
+            <div class="container mx-auto py-3 items-center flex justify-between">
+                <div class="flex items-center gap-1">
                     <img src="images/online-resume.png" alt="" class="w-8">
                     <span class="text-2xl font-bold text-indigo-900">Portfolio.</span>
+                </div>
+                    <ul class="hidden md:flex space-x-10 text-gray-700 font-bold text-sm uppercase">
+                        <li class="hover:text-red-600"><a href="#">homepage</a></li>
+                        <li class="hover:text-red-600"><a href="#">about me</a></li>
+                        <li class="hover:text-red-600"><a href="#">services</a></li>
+                        <li class="hover:text-red-600"><a href="#">works</a></li>
+                        <li class="hover:text-red-600"><a href="#">contact</a></li>
+                    </ul>
+                  <img src="images/dark-mode.png" alt="" class="hidden md:block cursor-pointer w-6 "> 
+                  <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20" >
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                  </div>
+                  <ul id="menu" class="uppercase md:hidden  bg-indigo-900 absolute left-0 top-0 w-full rounded-3xl p-10 space-y-10 text-white text-center">
+                    <li class="hover:text-black"><a href="#">homepage</a></li>
+                        <li class="hover:text-black"><a href="#">about me</a></li>
+                        <li class="hover:text-black"><a href="#">services</a></li>
+                        <li class="hover:text-black"><a href="#">works</a></li>
+                        <li class="hover:text-black"><a href="#">contact</a></li>
+                  </ul> 
                 </div>
             </div>
         </nav>
         <!-- content -->
         <div></div>
     </div>
+
+
+    <script>
+        const hamburger = document.querySelector('#hamburger')
+        const menu = document.querySelector('#menu')
+
+        //add Click function
+        hamburger.addEventListener("click", () =>{
+            menu.classList.toggle("hidden")
+            hamburger.classList.toggle("bg-white")
+        })
+    </script>
 </body> 
 </html>
