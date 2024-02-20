@@ -17,9 +17,9 @@
 </head>
 <body class="font-nuito">
     <!-- Intro section -->
-    <div class="h-1/2 lg:h-screen bg-gradient-to-t from bg-indigo-200">
+    <div class="h-1/2 lg:h-screen bg-gradient-to-t from bg-indigo-200 relative overflow-hidden">
         <!-- navbar -->
-        <nav class="w-full fixed top-0 bg-white">
+        <nav class="w-full fixed top-0 bg-white z-10" >
             <div class="container mx-auto py-3 items-center flex justify-between">
                 <div class="flex items-center gap-1">
                     <img src="images/online-resume.png" alt="" class="w-8">
@@ -49,7 +49,20 @@
             </div>
         </nav>
         <!-- content -->
-        <div></div>
+        <!-- portfolio image -->
+        <img src="images/portfolio-img.jpg" alt="" class="absolute bottom-0 right-0 h-5/6 object-cover lg:left-0 mx-auto rounded-full" width="500" height="300">
+        <!-- Animated text -->
+        <div class="top-1/4 absolute left-5 text-xl sm:left-5 sm:top-13 sm:text-4xl md:left-1/4 md:text-6xl lg:left-7 xl:left-46 xl:text-7xl font-bold">
+            <span class="text-blue-600">Freelance</span>
+            <p class="text-red-700" id="texts">Developer</p>
+        </div>
+        <!-- portfolio texts -->
+        <div class="hidden gap-5 absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit shadow-2xl hover:shadow-lg w-1/3 rounded-md lg:flex flex-col">
+            <h1 class="text-4xl font-bold text-blue-600">Hi! I'm Mwangi</h1>
+            <p class="text-gray-500">"Experienced, innovative professional eager to bring fresh perspectives to your team. With a proven track record of delivering high-quality work, I'm ready to contribute my talents to your projects. Let's collaborate to achieve outstanding results and drive success together. Hire me and let's make magic happen.</p>
+            <a href="#" class="bg-indigo-600  hover:bg-red-600 text-white hover:text-black text-xl px-5 py-2 w-fit rounded-full font-semibold">Hire Me</a>
+        </div>
+        
     </div>
 
 
@@ -63,5 +76,6 @@
             hamburger.classList.toggle("bg-white")
         })
     </script>
+    <script src="./autotyping.js"></script>
 </body> 
 </html>
