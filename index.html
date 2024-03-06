@@ -17,64 +17,72 @@
 </head>
 <body class="font-nuito">
     <!-- Intro section -->
-        <div class="sm:h-screen lg:1/2 bg-gradient-to-t from bg-slate-400 relative overflow-hidden">
-            <!-- navbar -->
-            <nav class="w-full fixed top-0 bg-white z-10" >
+        <div class="sm:h-screen lg:1/2 bg-gradient-to-t from bg-slate-800 relative overflow-hidden dark:from slate-800 dark:to slate-900 ">
+            <!-- navbar section -->
+            <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900" >
                 <div class="container mx-auto py-3 items-center flex justify-between">
                         <div class="flex items-center gap-1">
                             <img src="images/online-resume.png" alt="" class="w-8">
-                            <span class="text-2xl font-bold text-indigo-900">Portfolio.</span>
+                            <span class="text-2xl font-bold text-indigo-900 dark:text-white">Portfolio.</span>
                         </div>
-                        <ul class="hidden md:flex space-x-10 text-gray-700 font-bold text-sm uppercase">
-                            <li class="hover:text-red-600"><a href="#">homepage</a></li>
-                            <li class="hover:text-red-600"><a href="#">about me</a></li>
-                            <li class="hover:text-red-600"><a href="#">services</a></li>
-                            <li class="hover:text-red-600"><a href="#">works</a></li>
-                            <li class="hover:text-red-600"><a href="#">contact</a></li>
+                        <ul class="hidden md:flex space-x-10 text-gray-700 font-bold text-sm uppercase ">
+                            <li class="hover:text-red-600 dark:text-white dark:hover:text-red-500"><a href="#">homepage</a></li>
+                            <li class="hover:text-red-600  dark:text-white dark:hover:text-red-500"><a href="#about">about me</a></li>
+                            <li class="hover:text-red-600  dark:text-white dark:hover:text-red-500"><a href="#services">services</a></li>
+                            <li class="hover:text-red-600  dark:text-white dark:hover:text-red-500"><a href="#works">works</a></li>
+                            <li class="hover:text-red-600  dark:text-white dark:hover:text-red-500"><a href="#contact">contact</a></li>
                         </ul>
-                    <img src="images/dark-mode.png" alt="" class="hidden md:block cursor-pointer w-6 "> 
-                        <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-10" >
+                        <img
+                            id="dark"
+                            src="images/moon.png"
+                            class="hidden md:block w-6 cursor-pointer"
+                            alt="moon"
+                        />
+                        <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
                             <div class="w-6 h-0.5 bg-black"></div>
                             <div class="w-6 h-0.5 bg-black"></div>
                             <div class="w-6 h-0.5 bg-black"></div>
                         </div>
                     <ul id="menu" class="uppercase md:hidden  bg-indigo-900 absolute left-0 top-0 w-full rounded-3xl p-10 space-y-10 text-white text-center">
-                        <li class="hover:text-black"><a href="#">homepage</a></li>
-                            <li class="hover:text-black"><a href="#">about me</a></li>
-                            <li class="hover:text-black"><a href="#">services</a></li>
-                            <li class="hover:text-black"><a href="#">works</a></li>
-                            <li class="hover:text-black"><a href="#">contact</a></li>
+                        <li class="hover:text-black"><a id="hLink" href="#" >homepage</a></li>
+                            <li class="hover:text-black"><a id="hLink" href="#about" >about me</a></li>
+                            <li class="hover:text-black"><a id="hLink" href="#services" >services</a></li>
+                            <li class="hover:text-black"><a id="hLink"  href="#works" >works</a></li>
+                            <li class="hover:text-black"><a id="hLink" href="#contact" >contact</a></li>
                     </ul> 
                     </div>
                 </div>
             </nav>
-                <!-- content -->
-                <!-- portfolio image -->
-                <img src="images/portfolio-img.jpg" alt="" class="absolute bottom-0 right-20 h-5/6 object-cover lg:left-0 mx-auto rounded-full sm:h-3/5 sm:w-3/5 md:h-3/5 md:w-3/5  lg:h-5/6 lg:w-2/4" width="600" height="300">
-                <!-- Animated text -->
-                <div class="top-1/4 absolute left-5 text-xl sm:left-5 sm:top-13 sm:text-4xl md:left-1/4 md:text-6xl lg:left-7 xl:left-46 xl:text-7xl font-bold">
-                    <span class="text-blue-600">Freelance</span>
-                    <p class="text-red-700" id="texts"></p>
-                </div>
-                <!-- portfolio texts -->
-                <div class="hidden gap-5 absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit shadow-2xl hover:shadow-lg w-1/3 rounded-md lg:flex flex-col">
-                    <h1 class="text-4xl font-bold text-blue-600">Hi! I'm Gideon</h1>
-                    <p class="text-gray-500">"Experienced, innovative professional eager to bring fresh perspectives to your team. With a proven track record of delivering high-quality work, I'm ready to contribute my talents to your projects. Let's collaborate to achieve outstanding results and drive success together. Hire me and let's make magic happen.</p>
-                    <a href="#" class="bg-indigo-600  hover:bg-red-600 text-white hover:text-black text-xl px-5 py-2 w-fit rounded-full font-semibold">Hire Me</a>
-                </div>
-        </div>
-        <!-- About Me Page -->
-            <div class="px-40">
+             <!-- intro content -->
+            <!-- Animated text and texts -->
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+              <!-- Animated text -->
+              <div class="text-xl sm:text-4xl md:text-6xl lg:text-7xl font-bold">
+                  <span class="text-blue-600">Freelance.</span>
+                  <p id="texts" class="text-red-500"></p>
+              </div>
+              <!-- Texts -->
+              <div class="text-white mt-10">
+                  <h1 class="text-4xl font-bold">Hi, I'm Gideon</h1>
+                  <p class="text-gray-400 mt-4">
+                      Experienced, innovative professional eager to bring fresh perspectives to your team. With a proven track record of delivering high-quality work, I'm ready to contribute my talents to your projects. Let's collaborate to achieve outstanding results and drive success together. Hire me and let's make magic happen.
+                  </p>
+                  <a href="#contact" class="bg-indigo-600 text-white text-xl px-3 py-2 hover:bg-red-600 hover:text-black rounded-full font-semibold inline-block mt-8">Hire Me</a>
+              </div>
+          </div>
+        </div>  
+        <!-- About Me section -->
+            <div class="px-40 dark:bg-slate-900" id="about">
                 <div class="container mx-auto py-40 gap-20 items-center flex flex-col-reverse lg:flex-row">
                     <!-- Left side of the flexbox -->
                     <div class="relative">
-                        <img src="images/about-portfolio-img.jpg" alt="" class=" h-full rounded-full overflow-hidden" width="600" height="600">
+                        <img src="images/IMG-1.jpg" alt="" class="h-full rounded-full overflow-hidden">
                     </div>
                     <!--  Right side of the flexbox-->
                     <div class="my-auto flex flex-col space-y-4">
                         <h1 class="text-indigo-600 font-bold uppercase">About Me</h1>
-                        <h1 class="text-3xl font-medium">Better Design</h1>
-                        <h1 class="text-3xl font-medium">Better Experience</h1>
+                        <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+                        <h1 class="text-3xl font-medium dark:text-white">Better Experience</h1>
                         <p class="text-gray-400">"Crafting innovative designs with intuitive user experiences, my portfolio exemplifies a commitment to enhancing functionality, aesthetics, and satisfaction for every project."</p>
                         <h2 class="text-blue-600 font-medium">HTML</h2>
                         <div class="w-full bg-gray-200 h-1.5 rounded-md">
@@ -95,17 +103,176 @@
                 </div>
             </div>
         </div>
-
+         <!-- services section-->
+    <div id="services" class="dark:bg-slate-900">
+        <div class="container mx-auto">
+          <!-- top-services section-->
+          <div class="flex flex-col gap-3 items-center">
+            <h1 class="text-indigo-600 font-bold">SERVICES</h1>
+            <h1 class="text-3xl dark:text-white">What do I offer?</h1>
+            <p class="w-1/2 text-center text-gray-400">
+              My approach to website design is to create a website that
+              strengthens your company’s brand while ensuring ease of use and
+              simplicity for your audience.
+            </p>
+          </div>
+          <!-- bottom-services section -->
+          <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+            <!-- card -->
+            <div
+              class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+            >
+              <img class="w-10" src="images/coding.png" alt="web development" />
+              <h1 class="font-medium text-lg dark:text-white">Web  Development</h1>
+              <p class="text-gray-400">
+                Offering comprehensive web development services, crafting responsive and scalable solutions tailored to your unique business needs and objectives.
+              </p>
+              <a class="text-indigo-600 font-semibold text-sm" href="#"
+                >Read More</a
+              >
+            </div>
+            <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="images/user-experience.png" alt="front end dev" />
+            <h1 class="font-medium text-lg dark:text-white">Frontend Development</h1>
+            <p class="text-gray-400">
+              Delivering high-quality frontend development services, creating intuitive user interfaces and engaging web experiences that drive results for your business."
+            </p>
+            <a class="text-indigo-600 font-semibold text-sm" href="#"
+              >Read More</a
+            >
+          </div>
+          <div
+          class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+        >
+          <img class="w-10" src="images/javascript.png" alt="javascript">
+          <h1 class="font-medium text-lg dark:text-white">JavaScript</h1>
+          <p class="text-gray-400">
+            Offering JavaScript expertise for dynamic web solutions, interactive user interfaces, and efficient backend development tailored to your project requirements.
+          </p>
+          <a class="text-indigo-600 font-semibold text-sm" href="#"
+            >Read More</a
+          >
+        </div>
+          </div>
+        </div>
+    </div> 
+    
+     <!-- works & projects section-->
+     <div id="works" class="py-40 dark:bg-slate-900">
+        <div class="container mx-auto">
+          <!-- top-works section -->
+          <div class="flex flex-col gap-3 items-center">
+            <h1 class="text-indigo-600 font-bold">PORTFOLIO</h1>
+            <h1 class="text-3xl dark:text-white">Works & Projects</h1>
+            <p class="w-1/2 text-center text-gray-400">
+              I help designers, small agencies and businesses bring their ideas to
+              life. Powered by Figma, VS Code and coffee, I turn your requirements
+              into a well-designed websites
+            </p>
+          </div>
+                  <!-- bottom-works section -->
+                  <div class="p-3 m-2 sm:p-0 flex flex-wrap justify-between">
+                    <!-- card -->
+                    <div
+                      class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+                    >
+                      <img src="images/frontend.jfif" alt="image" />
+                  </div>
+                  <!-- card -->
+                  <div
+                  class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+                >
+                  <img src="images/javascript.png" alt="image" />
+              </div>
+                <!-- card -->
+                <div
+                class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+              >
+                <img src="images/UX Design.jpg" alt="image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contact section -->
+      <div id="contact" class="dark:bg-slate-900">
+        <div class="container mx-auto">
+          <!-- top-contact section -->
+          <div class="flex flex-col gap-3 items-center">
+            <h1 class="text-indigo-600 font-bold">CONTACT</h1>
+            <h1 class="text-3xl dark:text-white">Have a Question?</h1>
+            <p class="w-1/2 text-center text-gray-400">
+              Do you have an idea? Let's discuss it and see what we can do
+              together.
+            </p>
+          </div>
+          <!-- bottom-contact section-->
+          <form class="mt-5 p-8 flex flex-col gap-5 items-center">
+            <input
+              class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+              type="text"
+              placeholder="Name Surname"
+            />
+            <input
+              class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+              type="email"
+              placeholder="Email"
+            />
+            <textarea
+              class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+              cols="30"
+              rows="10"
+              placeholder="Message..."
+            ></textarea>
+            <button type="submit"  class="w-1/2 bg-indigo-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer">
+                submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="w-full bg-gray-800">
+        <div class="container mx-auto py-5 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <img class="w-8" src="images/online-resume.png" alt="" />
+            <span class="text-2xl font-bold text-white">Portfolio.</span>
+          </div>
+          <span class="hidden md:block font-medium text-white"
+            >© 2024 Portfolio. Design with ♥️ by Dev Gideon.</span
+          >
+          <div class="flex gap-2">
+            <img class="w-4 cursor-pointer" src="images/instagram.png" alt="icon" />
+            <img class="w-4 cursor-pointer" src="images/new.png" alt="icon" />
+            <img class="w-4 cursor-pointer" src="images/twitter (1).png" alt="icon" />
+          </div>
+        </div>
+      </div>
          <!-- javascripts codes -->
-    <script>
-        const hamburger = document.querySelector('#hamburger')
-        const menu = document.querySelector('#menu')
-
-        //add Click function
-        hamburger.addEventListener("click", () =>{
-            menu.classList.toggle("hidden")
-            hamburger.classList.toggle("bg-white")
-        })
+     <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector("#hamburger");
+            const menu = document.querySelector("#menu");
+            const moon = document.querySelector("#dark");
+            const body = document.querySelector("body");
+            const hLinks = document.querySelectorAll("#hLink ");
+            //small screen menu  toggle
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+                hamburger.classList.toggle("bg-white");
+            });
+             //menu toggle -- visibility when clicked
+            hLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                    hamburger.classList.toggle("bg-white");
+                });
+            });
+             // Dark Mode Toggle
+            moon.addEventListener("click", () => {
+                body.classList.toggle("dark");
+            });
+        });
     </script>
     <script src="./autotyping.js"></script>
 </body> 
